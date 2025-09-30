@@ -1,1 +1,1 @@
-web: gunicorn stss_backend_main.wsgi
+web: gunicorn config.wsgi

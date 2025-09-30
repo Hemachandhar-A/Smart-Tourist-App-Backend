@@ -15,7 +15,10 @@ SECRET_KEY = 'django-insecure-cf^2^l*2s5oi121_84l9s@%a8s+m^!#(i*a*q!r6k@j3%cdok_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ["smart-tourist-app-backend.onrender.com", "localhost", "127.0.0.1"]
+
 
 load_dotenv()
 ADMIN_API_KEY = os.environ.get('ADMIN_API_KEY')
