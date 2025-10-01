@@ -4,6 +4,6 @@ from .models import Alert
 class AlertSerializer(serializers.ModelSerializer):
     class Meta:
         model = Alert
-        fields = ['tourist_id', 'latitude', 'longitude']
+        fields = ['tourist_id', 'latitude', 'longitude','alert_type']
 
     
