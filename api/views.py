@@ -56,6 +56,7 @@ def login_user(request):
     name = data.get("name")
     phone = data.get("phone")
     user_type = data.get("userType", "tourist")
+    email = data.get("email")
 
     if not tourist_id:
         return Response({"error": "touristId is required"}, status=status.HTTP_400_BAD_REQUEST)
@@ -65,13 +66,15 @@ def login_user(request):
         defaults={
             "name": name,
             "phone": phone,
-            "user_type": user_type
+            "user_type": user_type,
+            "email" : email
         }
     )
 
     return Response({
         "tourist_id": tourist.tourist_id,
         "name": tourist.name,
+        "email": tourist.email,
         "phone": tourist.phone,
         "user_type": tourist.user_type,
         "created": created
